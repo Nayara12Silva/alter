@@ -1,31 +1,23 @@
+import 'react-native-gesture-handler'
 import React from 'react';
-import { StatusBar, View } from 'react-native';
+import { StatusBar,} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import {
-   useFonts,
-   Montserrat_400Regular,
-   Montserrat_500Medium,
-   Montserrat_600SemiBold,
-   Montserrat_700Bold,
-   Montserrat_800ExtraBold,
- } from '@expo-google-fonts/montserrat';
 import { Rotas } from './src/Routers';
 
-export default function App() {
-const [FontLoading] = useFonts({
- "MontSerratRegular": Montserrat_400Regular,
- "MontSerratMedium": Montserrat_500Medium,
- "MontSerratSemiBold": Montserrat_600SemiBold,
- "MontSerratBold": Montserrat_700Bold,
- "MontSerratExtraBold": Montserrat_800ExtraBold,
+// import { AppLoading} from 'expo'
+// import {useFonts,Anton_400Regular} from '@expo-google-fonts/anton'
 
-});
-if(!FontLoading){
-  return <View/>
-}
+export default function App() {
+  // const [fontsCarregada] = useFonts({
+  //   Anton_400Regular,
+  //  });
+
+  //  if(!fontsCarregada){
+  //    return <AppLoading/>
+  //  }
   return (
    <NavigationContainer>
-    <StatusBar backgroundColor='black' barStyle={'light-content'}/>
+      <StatusBar backgroundColor='#fff9ef' barStyle={'dark-content'}/>
       <Rotas/>
    </NavigationContainer>
   );
