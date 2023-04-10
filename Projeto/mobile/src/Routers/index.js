@@ -3,7 +3,8 @@ import { Login } from '../Pages/Login/index.cjs';
 import { Home } from '../Pages/Home/index.cjs';
 import {Cadastro} from '../Pages/Cadastro/index.cjs'
 import { Welcome} from '../Pages/Welcome/index.cjs';
-import teste from '../Pages/Welcome/teste.cjs';
+import Teste from '../Pages/Welcome/teste.cjs';
+// import { HeaderNave } from '../Components/Header/index.cjs';
 const Stack = createNativeStackNavigator();
 
 export function Rotas(){
@@ -29,9 +30,9 @@ export function Rotas(){
             component={Cadastro}
             options={{headerShown:false}}
             />
-              <Stack.Screen
-            name='teste'
-            component={teste}
+            <Stack.Screen
+            name='top'
+            component={Teste}
             options={{headerShown:false}}
             />
         </Stack.Navigator>
