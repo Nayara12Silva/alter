@@ -3,8 +3,6 @@ import { useNavigation } from '@react-navigation/native';
 import { View, Text,StyleSheet, TouchableOpacity,TextInput,Image} from 'react-native';
 import {MaterialIcons}from '@expo/vector-icons'
 
-
-
 export function Login(){
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -27,7 +25,6 @@ export function Login(){
                             placeholder="Digite seu Email"
                             value={email}
                             onChangeText={setEmail}
-                            secureTextEntry
                             style={styles.inpu} />
                         </View>
                         <View style={styles.inputIcones}>

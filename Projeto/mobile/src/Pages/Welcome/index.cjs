@@ -8,7 +8,10 @@ export function Welcome (){
     return(
         <ImageBackground source={require('../../../assets/logo/welcome.png')} style={styles.background}>
             <TouchableOpacity style={styles.btnAcessar}>
-                <Text style={styles.Acessar} onPress={()=>navegation.navigate('login')} >Acessar</Text>
+                <Text style={styles.Acessar}
+                 onPress={()=>navegation.navigate('home')}>
+                 Acessar
+                </Text>
             </TouchableOpacity>
         </ImageBackground>
            

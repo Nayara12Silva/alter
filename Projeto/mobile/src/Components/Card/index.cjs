@@ -24,7 +24,6 @@ const styles = StyleSheet.create({
     paddingVertical:'1%',
     alignItems:'center',
     justifyContent:'center',
-    // backgroundColor:'black'
   },
   texto:{
     color:'#4e0a0d',

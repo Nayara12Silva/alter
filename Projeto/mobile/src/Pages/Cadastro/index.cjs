@@ -45,7 +45,7 @@ export function Cadastro(){
 
                     <Text style={styles.link} onPress={()=>navegation.navigate('login')}>Login</Text>
                     <TouchableOpacity style={styles.btnAcessar}>
-                        <Text style={styles.texto}  onPress={()=>navegation.navigate('top')}>Cadastrar</Text>
+                        <Text style={styles.texto}>Cadastrar</Text>
                     </TouchableOpacity>
                 </View>
         </View>
@@ -81,10 +81,10 @@ const styles = StyleSheet.create({
       backgroundColor: '#fff9ef',
     },
     campos:{
-      alignItems: 'center',
-      justifyContent: 'center',
-      width: '90%',
-      height:'50%'
+       alignItems: 'center',
+       justifyContent: 'center',
+       width: '100%',
+       height:'50%'
     },
     input: {
         width: '90%',
