@@ -1,10 +1,11 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
+import Rodape from '../../Components/Footer/index.cjs';
 
 export default function Teste() {
  return (
    <View style={styles.container}>
-        
+        <Rodape/>
    </View>
   );
 };

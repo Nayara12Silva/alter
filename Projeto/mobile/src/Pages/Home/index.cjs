@@ -17,17 +17,18 @@ export function Home(){
                     <View style={styles.textContent}>
                         <Text style={styles.texto}>Produtos | Dogs</Text>
                         <TouchableOpacity style={{position:'absolute',right:3, alignSelf:'center'}}>
-                          <MaterialIcons name='filter-list' size={25} color="#4e0a0d" style={styles.icone}/>
+                          <MaterialIcons name='filter-list' size={25} color="#4e0a0d" style={styles.icone} onPress={()=>navegation.navigate('top')}/>
                         </TouchableOpacity>
                     </View>
                      <View style={styles.line}/>
+                     <Text style={styles.texto}>Destaques</Text>
+
                 </View>
                 {/* Fim do meu Header */}
                         <ScrollView  style={styles.scrollView}>
-                        <Text style={styles.texto}>Destaques</Text>
                                   <View style={styles.card}>
                                     <TouchableOpacity>
-                                      <Card img={require('../../../assets/produtos/pro3.png')}valor={'R$65,99'}>Cama Retangular</Card>
+                                      <Card img={require('../../../assets/produtos/pro3.png')}valor={'R$65,99'} >Cama Retangular</Card>
                                     </TouchableOpacity>
                                       <Card img={require('../../../assets/produtos/pro3.png')}valor={'R$65,99'}>Cama Retangular</Card>
                                   </View>
