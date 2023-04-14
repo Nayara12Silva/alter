@@ -4,14 +4,15 @@ import {MaterialIcons}from '@expo/vector-icons'
 import { Card } from '../../Components/Card/index.cjs';
 import { TopHeader } from '../../Components/Header/index.cjs';
 import { useNavigation } from '@react-navigation/native';
+import Rodape from '../../Components/Footer/index.cjs';
 
 
-export function Home(){
+export default function Home(){
   const navegation = useNavigation();
 
       return(
         <View style={styles.container}>
-                <TopHeader/>
+              <TopHeader/>
                 <View style={styles.header}>
                     <Image source={require('../../../assets/imgs/banner.jpg')} style={styles.image}/>
                     <View style={styles.textContent}>
@@ -19,13 +20,12 @@ export function Home(){
                         <TouchableOpacity style={{position:'absolute',right:3, alignSelf:'center'}}>
                           <MaterialIcons name='filter-list' size={25} color="#4e0a0d" style={styles.icone} onPress={()=>navegation.navigate('top')}/>
                         </TouchableOpacity>
+                     {/* <View style={styles.line}/>
+                     <Text style={styles.texto}>Destaques</Text> */}
                     </View>
-                     <View style={styles.line}/>
-                     <Text style={styles.texto}>Destaques</Text>
-
                 </View>
-                {/* Fim do meu Header */}
-                        <ScrollView  style={styles.scrollView}>
+                
+                      <ScrollView  style={styles.scrollView}>
                                   <View style={styles.card}>
                                     <TouchableOpacity>
                                       <Card img={require('../../../assets/produtos/pro3.png')}valor={'R$65,99'} >Cama Retangular</Card>
@@ -38,11 +38,13 @@ export function Home(){
                                       <Card img={require('../../../assets/produtos/pro3.png')}valor={'R$65,99'}>Cama Retangular</Card>
                                   </View>
 
-                                  <View style={styles.card}>
+                                   <View style={styles.card}>
                                       <Card img={require('../../../assets/produtos/pro3.png')}valor={'R$65,99'}>Cama Retangular</Card>
                                       <Card img={require('../../../assets/produtos/pro3.png')}valor={'R$65,99'}>Cama Retangular</Card>
                                   </View>
-                          </ScrollView>
+                       </ScrollView>
+              
+              <Rodape style={styles.Rodape}/>
         </View>
       )
   };
@@ -83,5 +85,11 @@ export function Home(){
     marginVertical: '5%',
     marginHorizontal: '5%',
     justifyContent:'space-around'
+  },
+  Rodape:{
+    position:'absolute',
+    bottom:0,
+    alignSelf:'center',
+    marginTop: 10,
   }
 })

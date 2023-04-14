@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Image, StyleSheet, Text, TouchableOpacity} from 'react-native';
 
 export function Card(props) {
   function LimeteTexto(desc){
@@ -14,7 +14,6 @@ export function Card(props) {
         <Image source={props.img} style={styles.image}/>
         <Text style={styles.texto}>{(LimeteTexto(props.children))}</Text>
         <Text style={styles.valor}>{props.valor}</Text>
-
     </TouchableOpacity>
   );
 };

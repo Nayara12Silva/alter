@@ -9,48 +9,41 @@ export default function Rodape() {
  return (
     <View  style={styles.container}>
            
-            <TouchableOpacity  style={styles.teste} onPress={()=>navegation.navigate('home')}>
+            <TouchableOpacity  style={styles.CardDesc} onPress={()=>navegation.navigate('home')}>
               <MaterialIcons name='home' size={30} style={styles.icone} />
               <Text style={styles.desc}>Home</Text>
             </TouchableOpacity>
-            <View  style={styles.teste}>
+            <View  style={styles.CardDesc}>
               <MaterialIcons name='grid-view' size={30} style={styles.icone} />
               <Text style={styles.desc}>Categorias</Text>
             </View>
-            <View  style={styles.teste}>
+            <View  style={styles.CardDesc}>
               <MaterialIcons name='receipt-long' size={30} style={styles.icone} />
               <Text style={styles.desc}>Pedidos</Text>
             </View>
-            <TouchableOpacity  style={styles.teste}  onPress={()=>navegation.navigate('login')}>
+            <TouchableOpacity  style={styles.CardDesc}  onPress={()=>navegation.navigate('login')}>
               <MaterialIcons name='account-circle' size={30} style={styles.icone} />
               <Text style={styles.desc}>Conta</Text>
             </TouchableOpacity>
-            
     </View>
-    //  <MaterialIcons name='home' size={30} style={styles.icone}onPress={()=>navegation.navigate('home')}/>
-    //  <MaterialIcons name='grid-view' size={30} style={styles.Lupa} />
-    //  <MaterialIcons name='receipt-long' size={30} style={styles.icone}/>
-    //  <MaterialIcons name='account-circle' size={30} style={styles.icone} />
   );
 }
 const styles = StyleSheet.create({
     container:{
       width:'100%',
       flexDirection: 'row',
+      justifyContent:'space-around',
       marginBottom: 10,
       padding:2
     },
        icone:{
         color:"#ff8702" 
       },
-      Lupa:{
-        color:'#ff8702',
-        marginLeft: 10
-      },
-    teste:{
+    CardDesc:{
         flexDirection: 'column',
-        justifyContent:'space-around',
-        padding:2
+        justifyContent:'center',
+        alignItems:'center',
+       
     },
     desc:{
         color:"#ff8702",

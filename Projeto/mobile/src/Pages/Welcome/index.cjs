@@ -3,7 +3,7 @@ import { StyleSheet,ImageBackground,TouchableOpacity,Text} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 
-export function Welcome (){
+export default function Welcome(){
     const navegation = useNavigation();
     return(
         <ImageBackground source={require('../../../assets/logo/welcome.png')} style={styles.background}>

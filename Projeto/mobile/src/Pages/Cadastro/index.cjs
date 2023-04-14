@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
     campos:{
        alignItems: 'center',
        justifyContent: 'center',
-       width: '100%',
+       width: '90%',
        height:'50%'
     },
     input: {
