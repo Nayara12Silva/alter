@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estoque</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="cabecalho__titulo">Estoque</h1>
+    </header>
+    <main>
+        <section class="container__form">
+            <form class="formulario">
+                <label for="tipo__vinho">Tipo do produto</label>
+                <input type="text" name="tipo__vinho" id="tipo__vinho" placeholder="Ex: Tinto" required>
+
+                <label for="quantidade__vinho">Quantidade do produto</label>
+                <input type="number" name="quantidade__vinho" id="quantidade__vinho" placeholder="Ex: 15" required>
+
+                <button type="submit" class="botao__adicionar">Adicionar +</button>
+            </form>
+        </section>
+        <section class="container__tabela">
+            <table class="tabela">
+                <tr>
+                  <th>Tipo</th>
+                  <th>Porcentagem</th>
+                  <th>Quantidade</th>
+                </tr>
+              </table>
+
+              <h2 class="quantidade__estoque">Quantidade de produtos em estoque: 0</h2>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

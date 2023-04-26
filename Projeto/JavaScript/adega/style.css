@@ -1,0 +1,102 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --branco: #FFFFFF;
+    --roxo: #4B2840;
+    --background: #C799A6;
+}
+
+body {
+    background-color: var(--background);
+    height: 100vh;
+}
+
+header {
+    padding: 25px;
+    background-color: var(--roxo);
+}
+
+.cabecalho__titulo {
+    font-size: 32px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--branco);
+}
+
+.container__form {
+    margin: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+    row-gap: 20px;
+}
+
+form label {
+    font-size: 20px;
+    color: var(--roxo);
+    font-weight: bold;
+}
+
+form input, .botao__adicionar {
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    outline-color: var(--roxo);
+    text-align: center;
+}
+
+.botao__adicionar {
+    width: 200px;
+    align-self: center;
+    color: var(--branco);
+    background-color: var(--roxo);
+}
+
+.botao__adicionar:hover {
+    cursor: pointer;
+    opacity: 90%;
+}
+
+.container__tabela {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    row-gap: 50px;
+}
+
+.container__tabela table, th, td {
+    border: 1px solid var(--roxo);
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+.tabela {
+    width: 400px;
+}
+
+.tabela th {
+    font-size: 18px;
+    background-color: #763d64;
+    color: var(--branco);
+}
+
+.tabela td {
+    font-size: 18px;
+}
+
+.quantidade__estoque {
+    color: var(--roxo);
+    font-weight: bold;
+    font-size: 24px;
+}
