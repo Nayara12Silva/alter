@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo do Frete</title>
+    <link rel="shortcut icon" href="./img/car.png" type="image/x-icon">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+      <div class="container">
+        <nav>
+            <h2>Cálculo de preços e prazos de entrega</h2>
+        </nav>
+        <div class="content">
+              <div class="dados">
+                <div class="box">
+                   <div class="campos">
+                    <h3 class="label" for="data">Data de Postagem</h3 class="label"><br>
+                    <input type="date" id="data">
+                    <div id="MinhaModal" class="modal">
+                        <div class="modal-content">
+                          <span class="Fechar">&times;</span>
+                          <h3>Data De Postagem</h3>
+                          <p>
+                            Os prazos de entrega são calculados a partir do primeiro dia útil seguinte ao da postagem e variam de acordo com as localidades de origem e de destino do objeto.<br><br>
+                            Os prazos de entrega podem ser alterados sem prévio aviso devido a ocorrência de situação de natureza fortuita e de força maior, como terremoto, ciclone, tempestade, inundação, guerra, queda de aeronave, embargo, atos ou omissões de autoridades públicas, etc.<br><br>
+                            Informando a data de postagem é possível verificar o prazo de entrega de um objeto numa data anterior à atual.
+                        </p>
+                        </div>
+                      </div>
+                    <button class="btnSaiba" onclick="showModal()"><a>Saiba Mais</a></button>
+                   </div>
+                    <div class="campos">
+                    <h3>Destinação</h2><br>
+                    <label for="cepOrigem">CEP de Origem</label>
+                    <input type="text" placeholder="apenas os números" id="cepOrigem">
+                    <br><br>
+                    <label for="cepDestino">CEP de Destino</label>
+                    <input type="text"placeholder="apenas os números" id="cepDestino"><br><br>
+                    <a href="https://buscacepinter.correios.com.br/app/endereco/index.php" target="_blank">Não sei o CEP</a>
+
+                    </div>
+                   <div class="caixa_Select">
+                    <div class="campos">
+                      <h3 for="services">Tipo de Serviço</h3><br>
+                      <select name="services" id="services">
+                          <option value="1">Selecione o Serviço</option>
+                          <option value="2">Pac</option>
+                          <option value="3">Sedex</option>
+                          <option value="4">Mini Envio</option>
+                      </select>
+                     </div>
+                     <div class="campos">
+                      <h3>Formato</h3><br>
+                      <select name="formDimensão" id="formDimensão">
+                          <option value="1">Selecione o Formato</option>
+                          <option value="cubo">Cubo/Pacote</option>
+                          <option value="cilindro">Cilindro/Esférico</option>
+                      </select>
+                     </div><br>
+                   </div><br>
+                   <div class="campos_Cubo">
+                    <h3>Dimensões</h3><br>
+                    <label for="altura">Altura(cm)</label><br>
+                    <input type="text"id="altura"><br>
+
+                    <label for="largura">Largura(cm)</label><br>
+                    <input type="text"id="largura"><br>
+
+                    <label for="comprimento">Comprimento(cm)</label><br>
+                    <input type="text"id="comprimento"><br>
+
+                    <label for="peso">Peso Estimado(Kg)</label><br>
+                    <input type="text"id="peso">
+                   </div><br>
+
+                    <button id="btnCalcular" type="submit">Calcular</button>
+                </div>
+                <table>
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th>Origem</th>
+                        <th>Destino</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CEP</td>
+                            <td id="cep_1"></td>
+                            <td id="cep_2"></td>
+                          </tr>
+                          <tr>
+                            <td>Endereço</td>
+                            <td id="ende_1"></td>></td>
+                            <td id="ende_2"></td>></td>
+                          </tr>
+                          <tr>
+                            <td>Bairro</td>
+                            <td id="bairro_1"></td>></td>
+                            <td id="bairro_2"></td>></td>
+                          </tr>
+                          <tr>
+                            <td>Cidade/ UF</td>
+                            <td id="cid_1"></td>></td>
+                            <td id="cid_2"></td>></td>
+                          </tr>
+                    </tbody>
+                </table>
+              </div>
+        </div>
+      </div>
+    <script src="./index.js"></script>
+    <script src="./correios.js"></script>
+</body>
+</html>
