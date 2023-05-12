@@ -1,0 +1,36 @@
+Primeiro, instale o http-proxy-middleware usando o npm:
+bash
+Copy code
+npm install http-proxy-middleware
+Crie um novo arquivo server.js (ou qualquer nome que você preferir) e adicione o seguinte código:
+javascript
+Copy code
+const express = require('express');
+const { createProxyMiddleware } = require('http-proxy-middleware');
+
+const app = express();
+
+// Configurar proxy para redirecionar as solicitações
+app.use(
+  '/add', // Endpoint que você deseja redirecionar
+  createProxyMiddleware({
+    target: 'http://localhost:8081', // URL do servidor de destino
+    changeOrigin: true, // Alterar a origem da solicitação para a origem do servidor de destino
+  })
+);
+
+// Iniciar o servidor
+app.listen(3000, () => {
+  console.log('Servidor de proxy iniciado na porta 3000');
+});
+Neste exemplo, o servidor de proxy é configurado para redirecionar as solicitações feitas para /add para o servidor de destino em http://localhost:8081. O changeOrigin é definido como true para alterar a origem da solicitação para a origem do servidor de destino.
+
+Execute o servidor de proxy:
+bash
+Copy code
+node server.js
+Agora, quando você fizer uma solicitação para http://localhost:3000/add no seu aplicativo React Native, a solicitação será redirecionada para http://localhost:8081/add através do servidor de proxy que configuramos.
+
+Lembre-se de ajustar a URL do servidor de destino e a rota de redirecionamento de acordo com a sua configuração específica. Além disso, você pode adicionar outras configurações ao objeto passado para createProxyMiddleware() para personalizar o comportamento do proxy, se necessário.
+
+Certifique-se de iniciar o servidor de proxy sempre que precisar usar a API que requer CORS. O servidor de proxy funcionará como intermediário entre o cliente e o servidor de destino, permitindo a comunicação sem restrições de CORS.
