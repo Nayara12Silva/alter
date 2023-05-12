@@ -69,3 +69,31 @@ const styles = StyleSheet.create({
     height: 200,
   },
 });
+
+
+Para somar valores numéricos dentro de um array em muitas linguagens de programação, você pode percorrer o array usando um loop e adicionar cada valor a uma variável de soma. Aqui está um exemplo em JavaScript:
+
+javascript
+Copy code
+const numeros = [1, 2, 3, 4, 5];
+let soma = 0;
+
+for (let i = 0; i < numeros.length; i++) {
+  soma += numeros[i];
+}
+
+console.log(soma); // saída: 15
+Neste exemplo, criamos um array chamado "numeros" e uma variável de soma inicializada com o valor zero. Em seguida, percorremos o array usando um loop "for", adicionando cada valor ao "soma" variável. Finalmente, imprimimos a soma total na console usando a função console.log().
+
+
+
+    // const Port = app.get('port');
+    const { createProxyMiddleware } = require('http-proxy-middleware');
+    // Configurar proxy para redirecionar as solicitações
+    app.use(
+    '/add', // Endpoint que você deseja redirecionar
+    createProxyMiddleware({
+      target: 'http://localhost:19006/add', // URL do servidor de destino
+      changeOrigin: true, // Alterar a origem da solicitação para a origem do servidor de destino
+    })
+  );

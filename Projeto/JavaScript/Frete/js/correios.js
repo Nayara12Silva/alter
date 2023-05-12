@@ -12,9 +12,9 @@ async function buscarCep(){
       return;
     }else if(CepOrigem.value==''||CepDestino.value ==''){
       alert("O Cep de Origem e de Destino devem ser informados.");
-    }
-    const urlOrigem = `https://viacep.com.br/ws/${origem}/json/`
-    fetch(urlOrigem).then(function(response){
+    } 
+     const urlOrigem = `https://viacep.com.br/ws/${origem}/json/`
+     fetch(urlOrigem).then(function(response){
       response.json().then(function(data){
         console.log(data)
         ExibirDadosOrigem(data)
@@ -39,19 +39,20 @@ async function buscarCep(){
   const bairro2 = document.querySelector('#bairro_2');
   const cid1 = document.querySelector('#cid_1');
   const cid2 = document.querySelector('#cid_2');
-  // Função para Exibir os dados na Tabela
+  //Função para exibar a tabela
   function ExibirTabela(){
     //em produção
   }
+  // Função para Exibir os dados na Tabela
   function ExibirDadosOrigem(dados){
-    Cep1.innerHTML = dados.cep
-    end1.innerHTML = dados.logradouro
-    bairro1.innerHTML = dados.bairro
-    cid1.innerHTML = `${dados.localidade} - ${dados.uf}`
+      Cep1.innerHTML = dados.cep
+      end1.innerHTML = dados.logradouro
+      bairro1.innerHTML = dados.bairro
+      cid1.innerHTML = `${dados.localidade} - ${dados.uf}`
   }
   function ExibirDadosDestino(dados){
-    Cep2.innerHTML = dados.cep
-    end2.innerHTML = dados.logradouro
-    bairro2.innerHTML = dados.bairro
-    cid2.innerHTML = `${dados.localidade} - ${dados.uf}`
+       Cep2.innerHTML = dados.cep
+       end2.innerHTML = dados.logradouro
+       bairro2.innerHTML = dados.bairro
+       cid2.innerHTML = `${dados.localidade} - ${dados.uf}`
   }

@@ -54,30 +54,45 @@
                      </div>
                      <div class="campos">
                       <h3>Formato</h3><br>
-                      <select name="formDimensão" id="formDimensão">
+                      <select name="formDimensao" id="formDimensao">
                           <option value="1">Selecione o Formato</option>
                           <option value="cubo">Cubo/Pacote</option>
                           <option value="cilindro">Cilindro/Esférico</option>
                       </select>
                      </div><br>
                    </div><br>
-                   <div class="campos_Cubo">
+                   <div class="camposDimensao">
+                    <div class="cubo">
+                      <h3>Dimensões</h3><br>
+                      <label for="altura">Altura(cm)</label><br>
+                      <input type="number"id="altura"><br>
+  
+                      <label for="largura">Largura(cm)</label><br>
+                      <input type="number"id="largura"><br>
+  
+                      <label for="comprimento">Comprimento(cm)</label><br>
+                      <input type="number"id="comprimento"><br>
+  
+                      <label for="peso">Peso Estimado(Kg)</label><br>
+                      <input type="number"id="peso">
+                     </div><br>
+                    </div>
+
+                    <div class="cilindro">
                     <h3>Dimensões</h3><br>
-                    <label for="altura">Altura(cm)</label><br>
-                    <input type="text"id="altura"><br>
+                   
+                   <label for="comprimentoCubo">Comprimento(cm)</label><br>
+                   <input type="number"id="comprimentoCubo"><br>
+                   
+                   <label for="diamentro">Diâmentro(cm)</label><br>
+                   <input type="number"id="diamentro"><br>
 
-                    <label for="largura">Largura(cm)</label><br>
-                    <input type="text"id="largura"><br>
+                   <label for="peso">Peso Estimado(Kg)</label><br>
+                   <input type="number"id="peso">
+                  </div><br>
+                  </div>
 
-                    <label for="comprimento">Comprimento(cm)</label><br>
-                    <input type="text"id="comprimento"><br>
-
-                    <label for="peso">Peso Estimado(Kg)</label><br>
-                    <input type="text"id="peso">
-                   </div><br>
-
-                    <button id="btnCalcular" type="submit"onclick="buscarCep()">Calcular</button>
-                    <button id="btnCalcular" type="submit"onclick="ExibirTabela()">ver tabela</button>
+                    <button id="btnCalcular" type="submit"onclick="calculoCubagem()">Calcular</button>
                 </div>
                 <table id="tabela" class="tabela">
                     <thead>

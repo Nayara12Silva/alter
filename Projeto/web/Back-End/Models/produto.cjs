@@ -27,5 +27,5 @@ const produtos = sequelize.define('produtos', {
     }, 
    
 });
-//produto.sync({force:true});
+//produtos.sync({force:true});
 module.exports = produtos;

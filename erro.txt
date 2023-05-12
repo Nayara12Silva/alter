@@ -1,0 +1,36 @@
+
+
+O erro "Failed to load resource: the server responded with a status of 404 (Not Found)" ocorre quando o navegador ou cliente não consegue encontrar o recurso solicitado no servidor. O código de status 404 indica que o recurso não foi encontrado.
+
+Existem algumas possíveis causas para esse erro:
+
+Verifique se o URL do recurso está correto. Certifique-se de que o URL esteja completo e corresponda exatamente ao local onde o recurso está localizado. Isso inclui verificar a ortografia, letras maiúsculas/minúsculas e barras (/) no caminho do URL.
+
+Verifique se o recurso está realmente disponível no servidor. Certifique-se de que o arquivo ou rota solicitada exista no servidor e esteja acessível. Verifique se o arquivo está no local correto ou se a rota está configurada corretamente no servidor.
+
+Verifique as permissões de acesso ao recurso. Se o arquivo ou rota estiver protegido por permissões de acesso, certifique-se de que o usuário tenha as permissões adequadas para acessar o recurso.
+
+Verifique se o servidor está em execução corretamente. Se você estiver executando o servidor localmente, certifique-se de que ele esteja em execução e funcionando corretamente. Verifique os logs do servidor em busca de quaisquer erros ou problemas de configuração.
+
+Essas são algumas das principais causas para o erro 404. Verifique esses pontos e faça os ajustes necessários para garantir que o recurso seja encontrado corretamente pelo servidor.
+
+
+
+
+O erro "Access to XMLHttpRequest at 'http://localhost:8081/add' from origin 'http://localhost:19006' has been blocked by CORS policy: Request header field content-type is not allowed by Access-Control-Allow-Headers in preflight response" ocorre quando você está fazendo uma solicitação AJAX (XMLHttpRequest) de um domínio (origem) para outro, e o servidor do domínio de destino não permite essa solicitação devido à política de CORS (Cross-Origin Resource Sharing).
+
+A política de CORS é uma medida de segurança implementada pelos navegadores para proteger os usuários contra solicitações não autorizadas de origens diferentes. Ela é aplicada pelo servidor e pode especificar quais origens, métodos HTTP e cabeçalhos são permitidos em solicitações vindas de domínios externos.
+
+Para resolver esse erro, você pode fazer algumas alterações no servidor que recebe a solicitação ou usar uma abordagem alternativa:
+
+Configurar o servidor para permitir solicitações CORS: Se você tem acesso ao servidor que está recebendo a solicitação, pode configurá-lo para permitir solicitações CORS. Isso geralmente envolve adicionar cabeçalhos adequados à resposta do servidor para permitir a origem, os métodos e os cabeçalhos corretos. Dependendo do servidor que você está usando, a configuração pode variar. Por exemplo, no Express.js (Node.js), você pode usar o pacote cors para configurar as permissões de CORS.
+
+Usar um servidor de proxy: Em vez de fazer a solicitação diretamente do cliente (localhost:19006) para o servidor (localhost:8081), você pode configurar um servidor de proxy intermediário que faça a solicitação em seu nome. Dessa forma, a solicitação será feita no mesmo domínio e porta, evitando o erro de CORS. Você pode usar ferramentas como o http-proxy-middleware no Express.js para configurar um servidor de proxy.
+
+Utilizar JSONP: Se o servidor de destino não suportar solicitações CORS e você não tiver acesso para configurá-lo, uma alternativa é usar JSONP (JSON with Padding) se o servidor suportar essa abordagem. JSONP permite fazer solicitações de origens diferentes, mas requer suporte do servidor. No entanto, essa abordagem tem algumas limitações e considerações de segurança.
+
+É importante lembrar que a abordagem a ser adotada depende do controle e da configuração que você tem sobre o servidor e a API que está sendo acessada. Se você não tiver controle sobre o servidor de destino, talvez seja necessário entrar em contato com o proprietário da API ou procurar alternativas que permitam a comunicação entre domínios diferentes.
+
+
+
+

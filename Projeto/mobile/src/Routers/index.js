@@ -1,29 +1,28 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 //Pages
-import { Login } from '../Pages/Login/index.cjs';
-import {Cadastro} from '../Pages/Cadastro/index.cjs'
-import TesteCards from '../Pages/Welcome/teste.cjs';
-import Welcome from '../Pages/Welcome/index.cjs';
-import Home from '../Pages/Home/index.cjs'
+import Welcome from '../Pages/Welcome/index.jsx';
+import Home from '../Pages/Home/index.jsx'
+import Cadastro from '../Pages/Cadastro/index.jsx';
+import Login from '../Pages/Login/index.jsx';
 const Stack = createNativeStackNavigator();
 
-export default function Rotas(){
+ function Rotas(){
     return(
         <Stack.Navigator>
             <Stack.Screen
             name='welcome'
             component={Welcome}
             options={{headerShown:false}}
-            />
+            /> 
             <Stack.Screen
             name='home'
             component={Home}
-            options={{headerShown:false}}
+            // options={{headerShown:false}}
             />
             <Stack.Screen
             name='login'
             component={Login}
-            options={{headerShown:false}}
+            // options={{headerShown:false}}
 
             />
             <Stack.Screen
@@ -31,11 +30,7 @@ export default function Rotas(){
             component={Cadastro}
             // options={{headerShown:false}}
             />
-            <Stack.Screen
-            name='top'
-            component={TesteCards}
-            options={{headerShown:false}}
-            />
         </Stack.Navigator>
     )
 }
+export default Rotas

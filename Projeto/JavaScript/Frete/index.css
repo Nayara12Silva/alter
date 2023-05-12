@@ -115,3 +115,15 @@ tr:nth-child(even) {
     display: flex;
     gap: 20px;
 }
+.cubo{
+    display: block;
+}
+/* .cubo.ativo{
+    display: block;
+} */
+.cilindro{
+    display: none;
+}
+/* .cilindro.ativo{
+    display: block;
+} */

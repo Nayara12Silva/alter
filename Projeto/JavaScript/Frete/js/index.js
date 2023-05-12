@@ -15,12 +15,27 @@ window.onclick = function(event) {
   }
 }
 //Abrir o Form das Dimensões
-const Formato_Embalagem = document.getElementById("formDimensão");
-var FormCubo = document.getElementsByClassName("campos_Cubo")[0];
+const Formato_Embalagem = document.getElementById("formDimensao");
+const formCubo =  document.querySelector("#cubo");
+const formCilindo =  document.querySelector("#cilindro");
+// em produção
 function SelectFormato(){
   if(Formato_Embalagem.value ==="cubo"){
-    FormCubo.style.display = "block"
-  }
+      formCubo.classList.add('ativo');
+      console.log('selecionei o cubo')
+  } return;
+}
+Formato_Embalagem.onclick = SelectFormato();
+
+// Função para o calculo da cubagem do produto
+const altura = document.getElementById('altura');
+const largura = document.getElementById('largura');
+const comprimento = document.getElementById('comprimento');
+
+function calculoCubagem(){
+  const frete = altura.value*largura.value*comprimento.value/300
+  frete.toFixed(2)
+  console.log(frete);
 }
 /* Frete = (Peso da carga x Preço por quilo) + 
 (Distância x Preço por quilômetro) + 
