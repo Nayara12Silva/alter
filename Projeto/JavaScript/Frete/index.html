@@ -35,10 +35,10 @@
                     <div class="campos">
                     <h3>Destinação</h2><br>
                     <label for="cepOrigem">CEP de Origem</label>
-                    <input type="text" placeholder="apenas os números" id="cepOrigem">
+                    <input type="number" placeholder="apenas os números" id="cepOrigem">
                     <br><br>
                     <label for="cepDestino">CEP de Destino</label>
-                    <input type="text"placeholder="apenas os números" id="cepDestino"><br><br>
+                    <input type="number"placeholder="apenas os números" id="cepDestino"><br><br>
                     <a href="https://buscacepinter.correios.com.br/app/endereco/index.php" target="_blank">Não sei o CEP</a>
 
                     </div>
@@ -76,9 +76,10 @@
                     <input type="text"id="peso">
                    </div><br>
 
-                    <button id="btnCalcular" type="submit">Calcular</button>
+                    <button id="btnCalcular" type="submit"onclick="buscarCep()">Calcular</button>
+                    <button id="btnCalcular" type="submit"onclick="ExibirTabela()">ver tabela</button>
                 </div>
-                <table>
+                <table id="tabela" class="tabela">
                     <thead>
                       <tr>
                         <th></th>
@@ -87,32 +88,32 @@
                       </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr id="tr1">
                             <td>CEP</td>
                             <td id="cep_1"></td>
                             <td id="cep_2"></td>
                           </tr>
                           <tr>
                             <td>Endereço</td>
-                            <td id="ende_1"></td>></td>
-                            <td id="ende_2"></td>></td>
+                            <td id="ende_1"></td></td>
+                            <td id="ende_2"></td></td>
                           </tr>
                           <tr>
                             <td>Bairro</td>
-                            <td id="bairro_1"></td>></td>
-                            <td id="bairro_2"></td>></td>
+                            <td id="bairro_1"></td></td>
+                            <td id="bairro_2"></td></td>
                           </tr>
                           <tr>
                             <td>Cidade/ UF</td>
-                            <td id="cid_1"></td>></td>
-                            <td id="cid_2"></td>></td>
+                            <td id="cid_1"></td></td>
+                            <td id="cid_2"></td></td>
                           </tr>
                     </tbody>
                 </table>
               </div>
         </div>
       </div>
-    <script src="./index.js"></script>
-    <script src="./correios.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/correios.js"></script>
 </body>
 </html>

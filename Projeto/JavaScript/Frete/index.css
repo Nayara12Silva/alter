@@ -62,13 +62,14 @@ nav{
     text-decoration: none;
     cursor: pointer;
 }
-table {
+.tabela {
+    display: none;
     margin-top: 20px;
     width: 60%;
     border: 1px solid var(--preto);
 }
 th, td {
-    text-align: left;
+    text-align: center;
     padding: 8px;
 }
 th {
@@ -79,7 +80,7 @@ th {
 tr:nth-child(even) {
     background-color:var(--cinza);
 }
-.btnBuscarCep,.btnCalcular,.btnSaiba{
+.btnBuscarCep,#btnCalcular,.btnSaiba{
     padding: 2px;
     width:10%;
     border-radius: 10px;
