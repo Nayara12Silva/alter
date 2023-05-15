@@ -1,14 +1,27 @@
 // como consultar o cep
 const CepOrigem = document.querySelector('#cepOrigem')
 const CepDestino = document.querySelector('#cepDestino')
-const btn_Calcular = document.querySelector('#btnCalcular');
+
+CepOrigem.addEventListener("keypress", (e) => {
+  const onlyNumbers = /[0-9]|\./;
+  const key = String.fromCharCode(e.keyCode);//pegar a tecla e valor que foi digitado
+  console.log(onlyNumbers.test(key));
+  //permitir so numeros
+  if (!onlyNumbers.test(key)) {
+    e.preventDefault();
+    return;
+  }
+});
 
 // Função para Buscar o cep
 async function buscarCep(){
   const origem = CepOrigem.value;
   const destino = CepDestino.value;
-    if(CepOrigem.value.length !== 8 && CepDestino.value.length !== 8){
-      alert("O Cep deve conter 8 números. Tente Novamente");
+    if(CepOrigem.value.length !== 8 ){
+      alert("O Cep Inválido. Tente Novamente");
+      return;
+    }if(CepDestino.value.length !== 8 ){
+      alert("O Cep Inválido. Tente Novamente");
       return;
     }else if(CepOrigem.value==''||CepDestino.value ==''){
       alert("O Cep de Origem e de Destino devem ser informados.");
