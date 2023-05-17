@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculo do Frete</title>
     <link rel="shortcut icon" href="./img/car.png" type="image/x-icon">
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./style/tabela.css">
 </head>
 <body>
       <div class="container">
@@ -16,7 +17,7 @@
         <div class="content">
               <div class="dados">
                 <div class="box">
-                   <div class="campos">
+                    <div class="campos">
                     <h3 class="label" for="data">Data de Postagem</h3 class="label"><br>
                     <input type="date" id="data">
                     <div id="MinhaModal" class="modal">
@@ -31,30 +32,26 @@
                         </div>
                       </div>
                     <button class="btnSaiba" onclick="showModal()"><a>Saiba Mais</a></button>
-                   </div>
+                    </div>
                     <div class="campos">
-                    <h3>Destinação</h2><br>
-                    <label for="cepOrigem">CEP de Origem</label>
-                    <input type="number" placeholder="apenas os números" id="cepOrigem">
-                    <br><br>
-                    <label for="cepDestino">CEP de Destino</label>
-                    <input type="number"placeholder="apenas os números" id="cepDestino"><br><br>
-                    <a href="https://buscacepinter.correios.com.br/app/endereco/index.php" target="_blank">Não sei o CEP</a>
-
+                          <label for="cepOrigem">CEP de Origem</label>
+                          <input type="number" placeholder="apenas os números" id="cepOrigem">
+                          <br><br>
+                          <label for="cepDestino">CEP de Destino</label>
+                          <input type="number"placeholder="apenas os números" id="cepDestino"><br><br>
+                          <a href="https://buscacepinter.correios.com.br/app/endereco/index.php" target="_blank">Não sei o CEP</a>
                     </div>
                    <div class="caixa_Select">
-                    <div class="campos">
-                      <h3 for="services">Tipo de Serviço</h3><br>
-                       <label for="pac">Pac</label>
-                       <input type="radio" value="Pac" id="pac" >
-                       <label for="Sedex">Sedex</label>
-                       <input type="radio" value="Sedex" id="sedex">
-                       <label for="mini">Mini Envio</label>
-                       <input type="radio" value="mini" id="mini">
-                     </div>
                      <div class="campos">
-                      <h3>Formato</h3><br>
-                       <div class="btnFormato">
+                      <div class="teste">
+                        <select name="boxSelect" id="boxSelect" onchange=" monstrarDimensao()">
+                          <option value="0">Selecione o Formato/Pacote</option>
+                          <option value="1">Caixa/Pacote</option>
+                          <option value="2">Rolo/Cilindro ou Esfera</option>
+                          <option value="3" disabled>Envelope</option>
+                        </select>
+                      </div>
+                       <div class="btnFormato" style="display: none;">
                           <button onclick=" ExibirDimensao()">Cubo/ Pacote</button>
                           <button>Cilindro/ Esférico</button>
                        </div>
@@ -75,19 +72,17 @@
                       <label for="peso">Peso Estimado(Kg)</label><br>
                       <input type="number"id="peso"  placeholder="Min: 0,1 kg Max: 150 kg">
                      </div><br>
-                    </div>
+                   </div>
+                   <div class="cilindro">
+                     
+                      <label for="comprimentoCubo">Comprimento(cm)</label><br>
+                      <input type="number"id="comprimentoCubo"><br>
+                      
+                      <label for="diamentro">Diâmentro(cm)</label><br>
+                      <input type="number"id="diamentro"><br>
 
-                    <div class="cilindro">
-                    <h3>Dimensões</h3><br>
-                   
-                   <label for="comprimentoCubo">Comprimento(cm)</label><br>
-                   <input type="number"id="comprimentoCubo"><br>
-                   
-                   <label for="diamentro">Diâmentro(cm)</label><br>
-                   <input type="number"id="diamentro"><br>
-
-                   <label for="peso">Peso Estimado(Kg)</label><br>
-                   <input type="number"id="peso" placeholder="Min: 0,1 kg Max: 150 kg">
+                      <label for="peso">Peso Estimado(Kg)</label><br>
+                      <input type="number"id="peso" placeholder=" Min: 0,1 kg Max: 150 kg">
                   </div><br>
                   </div>
 
@@ -155,6 +150,6 @@
         </div>
       </div>
     <script src="./js/index.js"></script>
-    <!-- <script src="./js/correios.js"></script> -->
+    <script src="./js/modal.js"></script>
 </body>
 </html>
