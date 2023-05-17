@@ -1,25 +1,3 @@
-const modal = document.getElementById("MinhaModal");
-const fecharModal = document.getElementsByClassName("Fechar")[0];
-// Function para a Modal
-function showModal() {
-    modal.style.display = "block";
-}// Quando o usuário clicar no botão de fechar, fecha a janela modal
-fecharModal.onclick = function() {
-    modal.style.display = "none";
-}// Quando o usuário clicar em qualquer lugar fora da janela modal, fecha a janela modal
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-//Abrir o Form das Dimensões
-const Formato_Embalagem = document.getElementById("formDimensao");
-const formCubo =  document.querySelector(".cubo");
-const formCilindo =  document.querySelector(".cilindro");
-// em produção
-function ExibirDimensao(){
-  formCubo.style.display="block"
-}
 // Função para o calculo da cubagem do produto
 const altura = document.getElementById('altura');
 const largura = document.getElementById('largura');
@@ -28,10 +6,10 @@ const peso = document.getElementById('peso');
 
 function calculoCubagem(){
   const cubagem = altura.value*largura.value*comprimento.value/6000
-  const taxaAdicional = 25 //R$25 taxa adicional para manuseio do produto
+  const taxaAdicional = 25 //R$25 taxa adicional para manuseio do produto com peso superior a 75kg
 
   if(peso.value < cubagem){
-     frete = cubagem*10 //  R$10 valor do metro m³
+    frete = cubagem*10 //R$10 valor do metro m³
 
   }else if (cubagem < 0.3){
     alert("A soma da multiplicação das dimensões devem ser maior que 0,3 kg")
@@ -44,11 +22,11 @@ function calculoCubagem(){
     return;
   }
   else if (peso.value > cubagem && cubagem >= 0.3){
-    frete = peso.value * 2.5 //  R$2,50 Preço por quilo
+    frete = peso.value * 2.5 //R$2,50 Preço por quilo
     buscarCep();
     ExibirCalculo();
     
-  }else if (peso.value >= cubagem && peso.value >= 75){
+  }else if (peso.value > cubagem && peso.value >= 75){
     frete = peso.value * 2.5 + taxaAdicional 
     buscarCep()
     ExibirCalculo();
@@ -57,22 +35,22 @@ function calculoCubagem(){
   console.log(`cubagem ${cubagem}`);
   console.log(`peso ${peso.value}`);
 }
- // Dados da tabela do Calculo do Frete
+// Dados da tabela do Calculo do Frete
    const tabelaCalculo = document.querySelector('#tabelaCalculo');
    const diaEntrega = document.querySelector('#diaEntrega');
    const TipoEntrega = document.querySelector('#TipoEntrega');
    const tabelaFrete = document.querySelector('#frete');
    const taxas = document.querySelector('#taxas');
    const total = document.querySelector('#total');
-   
-   // Função para Exibir os dados na Tabela
+// Função para Exibir os dados na Tabela
    function ExibirCalculo(){
        diaEntrega.innerHTML = "Dia da Postagem + 9 dias úteis"
        TipoEntrega.innerHTML = "Entrega Domiciliar"
-       tabelaFrete.innerHTML = `R$ ${frete}`
+       tabelaFrete.innerHTML = formatarMoeda(frete)//
        tabelaCalculo.style.display = "block";
    }
- //* Frete = (Peso da carga x Preço por quilo) + (Distância x Preço por quilômetro) + 
+//Frete = (Peso da carga x Preço por quilo) + (Distância x Preço por quilômetro) 
+
 // como consultar o cep
 const CepOrigem = document.querySelector('#cepOrigem')
 const CepDestino = document.querySelector('#cepDestino')
@@ -87,7 +65,6 @@ CepOrigem.addEventListener("keypress", (e) => {
     return;
   }
 });
-
 // Função para Buscar o cep
 async function buscarCep(){
   const origem = CepOrigem.value;
@@ -127,20 +104,42 @@ async function buscarCep(){
   const bairro2 = document.querySelector('#bairro_2');
   const cid1 = document.querySelector('#cid_1');
   const cid2 = document.querySelector('#cid_2');
-  //Função para exibar a tabela
-  function ExibirTabela(){
-    //em produção
-  }
   // Função para Exibir os dados na Tabela
-  function ExibirDadosOrigem(dados){
+function ExibirDadosOrigem(dados){
       Cep1.innerHTML = dados.cep
       end1.innerHTML = dados.logradouro
       bairro1.innerHTML = dados.bairro
       cid1.innerHTML = `${dados.localidade} - ${dados.uf}`
-  }
-  function ExibirDadosDestino(dados){
+}
+function ExibirDadosDestino(dados){
        Cep2.innerHTML = dados.cep
        end2.innerHTML = dados.logradouro
        bairro2.innerHTML = dados.bairro
        cid2.innerHTML = `${dados.localidade} - ${dados.uf}`
+}
+//Função para exibir as dimensões
+const valorSelecionado = document.getElementById("boxSelect");
+const Formato_Embalagem = document.getElementById("formDimensao");
+const formCubo =  document.querySelector(".cubo");
+const formCilindo =  document.querySelector(".cilindro");
+
+function monstrarDimensao(){
+  if (valorSelecionado.value === "1") {
+    formCubo.style.display = "block";
+    formCilindo.style.display = "none";
+  }else if(valorSelecionado.value  === "2") {
+    formCilindo.style.display = "block";
+    formCubo.style.display = "none";
+  }else if(valorSelecionado.value  === "0"||valorSelecionado.value ==="3") {
+    formCilindo.style.display = "none";
+    formCubo.style.display = "none";
+  }else{
+    alert('Selecione um formato')
   }
+}
+//função toLocaleString do JavaScript que permite formatar números com base nas configurações regionais do usuário
+function formatarMoeda(frete) {
+  const opcoes = { style: 'currency', currency: 'BRL' };
+  return frete.toLocaleString('pt-BR', opcoes);
+}
+monstrarDimensao()
