@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Red Hat Display",sans-serif
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: hsl(225, 100%, 94%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main{
+    background-color: #ffffff;
+    max-width: 416px;
+    border-radius: 1rem ;
+}
+main img{
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+ main section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+    height: 100%;
+}
+section h1{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: hsl(223, 47%, 23%);
+}
+section span{
+    color: hsl(224, 23%, 55%);
+    text-align: center;
+}
+
+.informations{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: hsl(225, 100%, 98%);
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+    margin: 1.5rem 0;
+}
+.informations .music-price{
+    display: flex;
+    align-items: center;
+}
+.informations img{
+    width: 50px;
+    margin: 1rem;
+}
+
+.informations .price{
+    display: flex;
+    flex-direction: column;
+}
+.informations a{
+    font-weight: 600;
+    font-size: 90%;
+    color:  hsl(245, 75%, 52%);
+    transform: 0.3s;
+    cursor: pointer;
+}
+.informations a:hover{
+    text-decoration: none;
+    color:  hsl(223, 47%, 23%);
+}
+button{
+    cursor: pointer;
+    color: #ffffff;
+    background-color: hsl(245, 75%, 52%);
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 1rem;
+    font-weight: 600;
+    box-shadow: 0 20px 20px rgba(53, 50, 50, 0.5);
+    margin-bottom: 1rem;
+    transition: 0.3;
+}
+button:hover{
+    background-color: #766cf1;
+}
+#cancel{
+    margin-bottom: 1rem;
+    text-decoration: none;
+    font-weight: 600;
+    color:  hsl(245, 75%, 52%);
+    transition: 0.3;
+}
+#cancel:hover{
+    color:  hsl(223, 47%, 23%);
+}
+
+
