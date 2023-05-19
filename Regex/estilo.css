@@ -13,14 +13,14 @@
 
 .container{
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .form{
-    width: 50%;
-    height: 80%;
+    width: 90vw;
+    height: 90vh;
     text-align: center;
     padding: 1rem;
     border-radius: 20px;
@@ -29,6 +29,12 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;}
 .campo1{
     text-align: left;
+    display:flex;
+    align-items: center;
+    gap: 90px;    
+}
+.campo1 input[type="text"]{
+    width: 90%;
 }
 .campo1 label, .campo5 label {
     display: block;
@@ -44,7 +50,7 @@ input[type="text"],select{
 }
 .campo2,.campo3{
     text-align: left;
-    margin-top: 5px;
+    /* margin-top: 5px; */
 }
 .campo4{
     display: block;
@@ -57,13 +63,12 @@ input[type="text"],select{
     margin-bottom: 10px
 }
 .campo5{
-    text-align: left;
+    text-align: center;
     margin-top: 5px;
 }
 .campo5 textarea{
     width: 80%;
     margin-bottom: 5px
-
 }
 #btn{
     width: 40%;
@@ -72,7 +77,11 @@ input[type="text"],select{
     color:var(--branco) ;
     background-color: var(--preto);
 }
-#ValidateEmail{
-    color: red;
+.span_required{
+    display: none ;
+    color:  #e63636;
+}
+.span_Radio{
     display: none;
+    color:  #e63636;
 }
