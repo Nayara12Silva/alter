@@ -20,7 +20,7 @@
 }
 .form{
     width: 90vw;
-    height: 90vh;
+    height: 99vh;
     text-align: center;
     padding: 1rem;
     border-radius: 20px;
@@ -33,8 +33,8 @@
     align-items: center;
     gap: 90px;    
 }
-.campo1 input[type="text"]{
-    width: 90%;
+#section_3, #section_2, #section_1{
+    width: 30%;
 }
 .campo1 label, .campo5 label {
     display: block;
@@ -42,7 +42,7 @@
     margin-bottom: 5px;
 }
 input[type="text"],select{
-    width: 30%;
+    width: 100%;
     padding: 5px;
     margin-bottom: 10px;
     border: 1px solid var(--cinza);
@@ -76,6 +76,7 @@ input[type="text"],select{
     padding:5px;
     color:var(--branco) ;
     background-color: var(--preto);
+    margin-bottom: 5px;
 }
 .span_required{
     display: none ;
@@ -83,5 +84,25 @@ input[type="text"],select{
 }
 .span_Radio{
     display: none;
-    color:  #e63636;
+    color: #e63636;
+}
+.campo3 label{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+#span_Condicao{
+    display: none;
+    color: #e63636;
+}
+.span_Text{
+    color: #e63636;
+    display: none;
+}
+#textArea{
+    padding-left: 1rem;
+}
+.span_Box{
+    display: none;
+    color: #e63636;
 }

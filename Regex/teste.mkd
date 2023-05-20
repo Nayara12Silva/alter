@@ -33,3 +33,15 @@ const terceiro = document.getElementById ('terceiro');
       return false;
    }
  }
+
+
+   for(const i = 0; i < checkboxes.length; i++){
+      if(checkboxes[i].checked){
+         const checkboxSelecionado = checkboxes[i].value;
+         span_Box.style.display = "none"
+         console.log(checkboxSelecionado);
+         return;
+      }else{
+         span_Box.style.display = "block"
+      }
+   }
