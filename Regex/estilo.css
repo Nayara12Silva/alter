@@ -13,14 +13,14 @@
 
 .container{
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .form{
-    width: 50%;
-    height: 80%;
+    width: 90vw;
+    height: 99vh;
     text-align: center;
     padding: 1rem;
     border-radius: 20px;
@@ -29,6 +29,12 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;}
 .campo1{
     text-align: left;
+    display:flex;
+    align-items: center;
+    gap: 90px;    
+}
+#section_3, #section_2, #section_1{
+    width: 30%;
 }
 .campo1 label, .campo5 label {
     display: block;
@@ -36,7 +42,7 @@
     margin-bottom: 5px;
 }
 input[type="text"],select{
-    width: 30%;
+    width: 100%;
     padding: 5px;
     margin-bottom: 10px;
     border: 1px solid var(--cinza);
@@ -44,7 +50,7 @@ input[type="text"],select{
 }
 .campo2,.campo3{
     text-align: left;
-    margin-top: 5px;
+    /* margin-top: 5px; */
 }
 .campo4{
     display: block;
@@ -57,13 +63,12 @@ input[type="text"],select{
     margin-bottom: 10px
 }
 .campo5{
-    text-align: left;
+    text-align: center;
     margin-top: 5px;
 }
 .campo5 textarea{
     width: 80%;
     margin-bottom: 5px
-
 }
 #btn{
     width: 40%;
@@ -71,8 +76,33 @@ input[type="text"],select{
     padding:5px;
     color:var(--branco) ;
     background-color: var(--preto);
+    margin-bottom: 5px;
 }
-#ValidateEmail{
-    color: red;
+.span_required{
+    display: none ;
+    color:  #e63636;
+}
+.span_Radio{
     display: none;
+    color: #e63636;
+}
+.campo3 label{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+#span_Condicao{
+    display: none;
+    color: #e63636;
+}
+.span_Text{
+    color: #e63636;
+    display: none;
+}
+#textArea{
+    padding-left: 1rem;
+}
+.span_Box{
+    display: none;
+    color: #e63636;
 }

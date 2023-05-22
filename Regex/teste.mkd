@@ -1,0 +1,47 @@
+
+// if(!ValidEmail){
+//    ValidateEmail.style.display = "block"
+// }else if(nome.value ===''){
+//   // section_3.innerHTML = ` <span> Preencha Este Campo</span>`
+//   alert("campo vazio")
+    
+// }
+const nome = document.getElementById('nome').value;
+const sobrenome = document.getElementById('sobrenome').value;;
+const email = document.getElementById('email').value;;
+
+const boxSelect = document.getElementById('boxSelect');
+const box = document.getElementById('box');
+const textArea = document.getElementById('textArea');
+const span_3 = document.getElementById('span_3');
+const span_2 = document.getElementById('span_2');
+const span_1 = document.getElementById('span_1');
+
+// const ValidateEmail = document.getElementById('ValidateEmail');
+// const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;// para validar o email
+// const ValidEmail = emailRegex.test(email.value);
+
+
+const primeiro = document.getElementById ('primeiro');
+const segundo = document.getElementById ('segundo');
+const terceiro = document.getElementById ('terceiro');
+ function inputRadio(){
+   if(primeiro.checked || segundo.checked ||terceiro.checked){
+      alert ("ok");
+   }else if(!primeiro.checked || !segundo.checked || !terceiro.checked){
+      span_Radio.style.display="block"
+      return false;
+   }
+ }
+
+
+   for(const i = 0; i < checkboxes.length; i++){
+      if(checkboxes[i].checked){
+         const checkboxSelecionado = checkboxes[i].value;
+         span_Box.style.display = "none"
+         console.log(checkboxSelecionado);
+         return;
+      }else{
+         span_Box.style.display = "block"
+      }
+   }
