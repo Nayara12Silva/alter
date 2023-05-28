@@ -1,0 +1,29 @@
+[
+    {
+        "id": "1",
+        "nome": "Boneco kakashi",
+        "foto": "public/FigureAction/14.webp",
+        "descricao": "Boneco kakashi hatake 20cm",
+        "valor": "128,99"
+    },
+    {
+        "id": "2",
+        "nome": "Boneco Gaara do Deserto",
+        "foto": "Boneco Funko Gaara 20cm",
+        "valor": "128,99" 
+    },
+    {
+        "id": "3",
+        "nome": "Boneco Minato",
+        "foto": "public/FigureAction/16.webp",
+        "descricao": "Boneco Funko Minato 20cm",
+        "valor": "128,99"  
+    },
+    {
+        "id": "4",
+        "nome": "Boneco Shikamaru Nara",
+        "foto": "public/FigureAction/17.webp",
+        "descricao": "Boneco Funko Shikamaru Nara 20cm",
+        "valor": "128,99"  
+    }
+  ]
