@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TI - Chamados</title>
+    <link rel="stylesheet" href="./style/estilo.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerenciamento De Chamados</h1>
+        <form class="form">
+           <div class="campos">
+                <label for="nome">Nome Completo</label>
+                <input type="text" name="nome" id="nome">
+
+                <label for="matricula">Matrícula</label>
+                <input type="number" id="matricula">
+           </div>
+           <div class="campos">
+                <label for="setor">Setor</label>
+                <select name="setor" id="setor">
+                    <option value="0" selected disabled></option>
+                    <option value="ADM">Setor administrativo</option>
+                    <option value="Financeiro">Setor financeiro</option>
+                    <option value="Rh">Setor de Recursos Humanos</option>
+                    <option value="Operacional">Setor operacional</option>
+                </select>
+           </div>
+           <div class="campos">
+            <label for="categoria">Categoria</label>
+            <select name="categoria" id="categoria">
+                <option value="0" selected disabled></option>
+                <option value="Redes">Redes</option>
+                <option value="Equipamento">Equipamento</option>
+                <option value="Periféricos">Periféricos</option>
+            </select>
+           </div>
+            <div class="campos">
+                <label for="desc">Descrição do Chamado</label>
+                <textarea name="desc" id="desc" cols="30" rows="10"></textarea>
+            </div>
+            <button>Enviar</button>
+
+        </form>
+        <div class="results">
+            <h3>Informações</h3>
+            <h4>Nome:</h4><span id="1"></span>
+            <h4>Matricula:</h4><span id="2"></span>
+            <h4>Setor:</h4><span id="3"></span>
+            <h4>categoria:</h4><span id="4"></span>
+            <h4>Descrição:</h4><span id="5"></span>
+        </div>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+</html>
