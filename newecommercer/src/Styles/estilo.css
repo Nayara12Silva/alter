@@ -1,0 +1,15 @@
+:root {
+    --branco: #FFFFFF;
+    --preto: #000;
+    --roxo: #4B2840;
+    --background: #947f85;
+}/* Componente Navegation */
+.nav{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+}
+.Logo{
+    width: 250px;
+    height: 100px;
+}
