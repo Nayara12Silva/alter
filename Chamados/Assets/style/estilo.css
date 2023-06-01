@@ -38,3 +38,6 @@ button{
     font-weight: bold;
     margin-top: 1rem;
 }
+.results{
+    display: none;
+}
