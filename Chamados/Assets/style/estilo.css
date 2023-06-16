@@ -38,7 +38,12 @@ button{
     font-weight: bold;
     margin-top: 1rem;
 }
+<<<<<<< HEAD
 
 .results{
  display: none;
+=======
+.results{
+    display: none;
+>>>>>>> ccf7d44ec3b6c9e2868763582ad7264694acc92f
 }
